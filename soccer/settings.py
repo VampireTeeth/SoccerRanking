@@ -67,11 +67,15 @@ STATIC_URL = '/static/'
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
+import os
+prj_dir = os.path.dirname(os.path.abspath(__file__))
+static_dir = os.path.join(prj_dir, 'static').replace('\\', '/')
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    static_dir,
 )
 
 # List of finder classes that know how to find static files in
@@ -102,10 +106,13 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'soccer.urls'
 
+template_dir = os.path.join(prj_dir, 'templates').replace('\\', '/')
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    template_dir,
 )
 
 INSTALLED_APPS = (
@@ -119,6 +126,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'ranking',
 )
 
 # A sample logging configuration. The only tangible logging
