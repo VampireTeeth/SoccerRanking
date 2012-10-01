@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('steven', 'steven.weike.liu@gmail.com'),
+     ('steven', 'steven.weike.liu@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -68,8 +68,8 @@ STATIC_URL = '/static/'
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 import os
-prj_dir = os.path.dirname(os.path.abspath(__file__))
-static_dir = os.path.join(prj_dir, 'static').replace('\\', '/')
+prj_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+static_dir = os.path.join(os.path.dirname(prj_dir), 'static').replace('\\', '/')
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -106,7 +106,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'soccer.urls'
 
-template_dir = os.path.join(prj_dir, 'templates').replace('\\', '/')
+template_dir = os.path.join(os.path.dirname(prj_dir), 'templates').replace('\\', '/')
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -114,7 +114,9 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     template_dir,
 )
-
+import sys
+if prj_dir not in sys.path:
+  sys.path.append(prj_dir)
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
