@@ -5,7 +5,6 @@ body{
 #container{
 	background:white;
 	width: 950px;
-	height: 1000px;
 	margin: 20px auto;
 }
 #nav-panel{
@@ -36,24 +35,24 @@ body{
     background-image: url("/static/images/c_sub_bg.gif");
 }
 
-.right_border_top{
+.team_score_top{
     width: 530px;
     height: 36px;
     line-height: 36px;
     background-image: url("/static/images/right_slider_top.gif");
 }
 
-.right_border_body{
+.team_score_body{
 	margin: 50px auto;
     width: 530px;
     height: auto;
     background-image: url("/static/images/right_slider_bg.gif");
 }
-.right_border_body table.score_list{
+.team_score_body table.score_list{
     width: 510px;
     margin-left: 11px;
 }
-.right_border_body table.score_list td{
+.team_score_body table.score_list td{
     line-height: 24px;
     text-align: center;
     color: #6E812A;
@@ -62,26 +61,26 @@ body{
     height: 24px;
     background-color: #d3de9c;
 }
-.right_border_body table.score_list tr.head td{
+.team_score_body table.score_list tr.head td{
 
     background-color: #c2d278;
     color:#6E812A;
 }
-.right_border_body table.score_list tr.line1 td{
+.team_score_body table.score_list tr.line1 td{
 
     background-color: #edf2d7;
 }
-.right_border_body table.score_list td.score{
+.team_score_body table.score_list td.score{
     font-family: "verdana";
     width: 50px;
     font-weight: bold;
 }
-.right_border_body table.score_list td.team{
+.team_score_body table.score_list td.team{
     width: 100px;
     font-weight: bold;
 
 }
-.right_border_bottom{
+.team_score_bottom{
     width: 530px;
     height: 31px;
     background-image: url("/static/images/right_slider_bottom.gif");
