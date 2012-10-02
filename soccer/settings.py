@@ -69,7 +69,7 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 import os
 prj_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-static_dir = os.path.join(os.path.dirname(prj_dir), 'static').replace('\\', '/')
+static_dir = os.path.join(prj_dir, 'static').replace('\\', '/')
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -106,8 +106,9 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'soccer.urls'
 
-template_dir = os.path.join(os.path.dirname(prj_dir), 'templates').replace('\\', '/')
+template_dir = os.path.join(prj_dir, 'templates').replace('\\', '/')
 
+print template_dir
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.

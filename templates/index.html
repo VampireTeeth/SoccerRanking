@@ -1,0 +1,57 @@
+{%extends "base.html"%}
+{%block title%}Ranking | Results{%endblock%}
+
+{%block content%}
+<div class="right_border_body">
+	<div class="right_border_top">&nbsp;</div>
+	<table border="0" cellpadding="0" cellspacing="0" class="score_list">
+	    <tr class="head">
+	        <td class="score" >
+	            Rank</td>
+	        <td class="team" >
+	            Team</td>
+	        <td class="score" >
+	            Matches</td>
+	        <td class="score" >
+	            Won</td>
+	        <td class="score" >
+	            Draw</td>
+	        <td class="score" >
+	            Lost</td>
+	        <td class="score" >
+	            Goal</td>
+	        <td class="score" >
+	            Conceded</td>
+	        <td class="score" >
+	            Goal Difference</td>
+	        <td class="score"  style="border-right:0;">
+	            Score</td>
+	    </tr>
+	   	{%for team in teams%}
+	   	<tr>
+	        <td class="score" >
+	            {{team.rank}}</td>
+	        <td class="team" >
+	            {{team.name}}</td>
+	        <td class="score" >
+	            {{team.matches}}</td>
+	        <td class="score" >
+	            {{team.won}}</td>
+	        <td class="score" >
+	            {{team.draw}}</td>
+	        <td class="score" >
+	            {{team.lost}}</td>
+	        <td class="score" >
+	            {{team.goal}}</td>
+	        <td class="score" >
+	            {{team.conceded}}</td>
+	        <td class="score" >
+	            {{team.goal_diff}}</td>
+	        <td class="score"  style="border-right:0;">
+	         	{{team.score}}</td>
+	    </tr>
+	   	{%endfor%}
+	</table>
+	<div class="right_border_bottom">&nbsp;</div>
+</div>
+{%endblock%}

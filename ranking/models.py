@@ -10,6 +10,7 @@ class Season(models.Model):
 class Team(models.Model):
   rank = models.IntegerField(default=0)
   name = models.CharField(max_length=100)
+  matches = models.IntegerField(default=0)
   won = models.IntegerField(default=0)
   draw = models.IntegerField(default=0)
   lost = models.IntegerField(default=0)

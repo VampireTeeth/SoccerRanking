@@ -1,51 +1,22 @@
-@CHARSET "UTF-8";
 
 body{
-    background-color: white;
-    font-size: 12px;
-    margin: 0;
+	background-color: black;
 }
-
-.container{
-    width: 950px;
-    margin: 0 auto;
-
+#container{
+	background:white;
+	width: 950px;
+	height: 1000px;
+	margin: 20px auto;
 }
-img{
-    border: 0;
-}
-a{
-    color:#6E812A;
-}
-.sinabanner{
-    margin-bottom: 5px;
-}
-.nav{
-    width: 950px;
-    height: auto;
-    float: left;
-    }
-.nav_line
-{
-    width: 920px;
-    padding-left: 30px;
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/Line_bg.gif");
-}
-.nav_line a{
-    float: left;
-    }
-.csllogo{
-    float: left;
-
-}
-.subnav{
+#nav-panel{
     width: 908px;
-    _margin-top:-5px;
+    margin-top:5px;
     height: 32px;
     padding-left: 42px;
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/sub_line.jpg");
+    background-image: url("/static/images/sub_line.jpg");
 }
-.subnav a{
+
+#nav-panel a{
     color: white;
     margin-right: 24px;
     line-height: 32px;
@@ -55,160 +26,28 @@ a{
     display: block;
     float: left;
 }
-.subnav a.cur{
+
+#nav-panel a.cur{
     color: white;
     line-height: 32px;
     text-align: center;
     height: 32px;
     width: 77px;
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/c_sub_bg.gif");
-
-}
-.data_container_top{
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/border_top.gif");
-    width: 940px;
-    height: 22px;
-    margin-top: 8px;
-    margin-left: 5px;
-clear:both;
-}
-.data_container{
-    background-image: url("http://i3.sinaimg.cn/ty/lingxian/v2/border_bg.gif");
-    width: 940px;
-    height: auto;
-    margin-left: 5px;
-clear:both;
-}
-.data_container_bootom{
-    background-image: url("http://i3.sinaimg.cn/ty/lingxian/v2/border_bottom.gif");
-    width: 940px;
-    height: 22px;
-    margin-left: 5px;
-clear:both;
-}
-.left_slide{
-    width: 350px;
-    height: auto;
-    margin-left: 20px;
-    float: left;
-    margin-top: 10px;
-
-}
-.right_slide{
-    margin-top: 10px;
-    width: 530px;
-    height: auto;
-    margin-left: 15px;
-    float: left;
-
-}
-.left_border_top{
-    width: 350px;
-    height: 32px;
-    line-height: 32px;
-    background-image: url("http://i0.sinaimg.cn/ty/lingxian/v2/left_slider_top.gif");
-}
-.left_border_top span{
-    margin-left: 16px;
-    margin-top: 8px;
-    display: block;
-    width: 80%;
-    line-height: 24px;
-    color:#6E812A;
-    font-weight: bold;
-}
-.left_border_top a{
-		margin-right:12px;
+    background-image: url("/static/images/c_sub_bg.gif");
 }
 
-.left_border_top a.selmenu{
-		color:black;
-}
-
-.left_border_body{
-    width: 350px;
-    height: auto;
-    background-image: url("http://i2.sinaimg.cn/ty/lingxian/v2/left_slider_bg.gif");
-}
-.left_border_body table{
-    width: 330px;
-    margin-left: 10px;
-    color: #6E812A;
-    border: 0;
-}
-.left_border_body table td{
-    line-height: 20px;
-    text-align: center;
-    border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-    height: 20px;
-    background-color: #edf2d7;
-}
-.left_border_body table tr.line1 td{
-    background-color: #d3de9c;
-}
-
-.left_border_body table td.team{
-    width: 130px;
-
-}
-.left_border_body table td.score{
-    width: 70px;
-    font-family: "verdana";
-    font-size: 12px;
-
-}
-.left_border_body table.player_sort td.score{
-    width: 50px;
-    font-family: "verdana";
-    font-size: 12px;
-    font-weight: normal;
-}
-.left_border_body table.player_sort td.player{
-    width: 90px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.left_border_body table.player_sort td.team{
-    width: 90px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.left_border_body table.team_sort td.score{
-    width: 50px;
-    font-family: "verdana";
-    font-size: 12px;
-    font-weight: normal;
-}
-
-.left_border_body table.team_sort td.team{
-    width: 180px;
-    font-size: 12px;
-    font-weight: normal;
-}
-.left_border_bottom{
-    width: 350px;
-    height: 26px;
-    background-image: url("http://i2.sinaimg.cn/ty/lingxian/v2/left_slider_bottom.gif");
-}
 .right_border_top{
     width: 530px;
     height: 36px;
     line-height: 36px;
-    background-image: url("http://i3.sinaimg.cn/ty/lingxian/v2/right_slider_top.gif");
+    background-image: url("/static/images/right_slider_top.gif");
 }
-.right_border_top img{
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-    margin-left: 27px;
-
-    }
 
 .right_border_body{
+	margin: 50px auto;
     width: 530px;
     height: auto;
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/right_slider_bg.gif");
+    background-image: url("/static/images/right_slider_bg.gif");
 }
 .right_border_body table.score_list{
     width: 510px;
@@ -242,318 +81,8 @@ clear:both;
     font-weight: bold;
 
 }
-.otherlink{
-    width: 280px;
-    float: left;
-    height: auto;
-}
-.otherlink a{
-    display: block;
-    margin-top: 12px;
-    margin-left: 20px;
-}
-.csldata_logo{
-    width:180px;
-    margin-right: 24px;
-    float: right;
-}
-
 .right_border_bottom{
     width: 530px;
     height: 31px;
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/right_slider_bottom.gif");
+    background-image: url("/static/images/right_slider_bottom.gif");
 }
-div.round_list{
-	padding-left:18px;
-}
-table.round_list{
-    background-color: #edf2d7;
-    width: 900px;
-
-}
-table.round_list td{
-    width: 60px;
-    text-align: center;
-    height: 20px;
-    line-height: 20px;
-     color: #6E812A;
-     font-weight: bold;
-
-}
-table.round_list td a{
-    color: #6E812A;
-    }
-
-table.round_list td.col1{
-    background-color: #d3de9c;
-}
-
-table.match_list{
-    background-color: #edf2d7;
-    width: 900px;
-    margin-left: 18px;
-}
-table.match_list td{
-    width: 225px;
-    text-align: center;
-    height: 20px;
-    line-height: 20px;
-     color: #6E812A;
-     font-weight: bold;
-
-}
-table.match_list td a{
-    color: #6E812A;
-    }
-
-table.match_list td.col1{
-    background-color: #d3de9c;
-}
-
-table.player_list{
-    float: left;
-    width: 250px;
-    margin-left: 18px;
-
-}
-* html table.player_list{
-    margin-left: 10px;
-}
-table.player_list td{
-    background-color: #edf2d7;
-    text-align: center;
-    height: 24px;
-    line-height: 24px;
-    color: #6E812A;
-
-    border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-}
-
-table.player_list tr.head td{
-    background-color: #c2d278;
-    color:#6E812A;
-    }
-    table.player_list tr.line1 td{
-    background-color: #d3de9c;
-    color:#6E812A;
-    }
-
-table.match_list td a{
-    color: #6E812A;
-    }
-table.player_list td.no{
-    width:50px;
-    font-family: "verdana";
-}
-table.player_list td.score{
-    width:70px;
-    font-family: "verdana";
-}
-table.player_list td.name{
-    width:130px;
-}
-
-table.match_info{
-    float: left;
-    width: 365px;
-    margin-left: 18px;
-
-}
-* html table.match_info{
-    margin-left: 15px;
-    margin-right: 5px;
-    }
-table.match_info caption{
-    color: #6E812A;
-}
-table.match_info td{
-    background-color: #edf2d7;
-    text-align: center;
-    height: 24px;
-    line-height: 24px;
-    color: #6E812A;
-
-    border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-}
-
-table.match_info tr.head td{
-    background-color: #c2d278;
-    color:#6E812A;
-    }
-    table.player_list tr.line1 td{
-    background-color: #d3de9c;
-    color:#6E812A;
-    }
-
-table.match_info td a{
-    color: #6E812A;
-    }
-table.match_info td.score{
-    width:100px;
-    font-family: "verdana";
-}
-table.match_info td.title{
-    background-color: #c2d278;
-    color:#6E812A;
-    width:165px;
-    font-weight: bold;
-}
-.PercentBar{
-    background-image: url("http://i3.sinaimg.cn/ty/lingxian/v2/line2_bg.gif");
-    display: block;
-    color: white;
-    height: 22px;
-}
-table.tabs{
-    margin-left: 36px;
-    color: silver;
-clear:both;
-}
-table.tabs td{
-    background-image: url("http://i0.sinaimg.cn/ty/lingxian/v2/tab_bg.gif");
-    text-align: center;
-    line-height: 32px;
-    width: 105px;
-    height: 32px;
-    color: silver;
-}
-table.tabs td a{
-    color: #868686;
-    }
-table.tabs td.cur{
-    background-image: url("http://i1.sinaimg.cn/ty/lingxian/v2/cur_tab_bg.gif");
-    font-size: 14px;
-    font-weight: bold;
-    color: #6E812A;
-}
-table.tabs td.cur a{
-    color: #6E812A;
-    }
-
-.data_container table.team_sort {
-    margin-left: 28px;
-    width: 880px;
-
-}
-.data_container table.team_sort td{
-    background-color: #edf2d7;
-    text-align: center;
-    width: 220px;
-    color:#6E812A;
-    line-height: 28px;
-    border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-    }
-.data_container table.team_sort tr.head td{
-    background-color: #c2d278;
-    font-weight: bold;
-
-}
-.data_container table.team_sort tr.line1 td{
-    background-color: #d3de9c;
-
-    }
-
-.data_container table.player_sort {
-    margin-left: 28px;
-    width: 880px;
-
-}
-.data_container table.player_sort td{
-    background-color: #edf2d7;
-    text-align: center;
-    width: 176px;
-    color:#6E812A;
-    line-height: 28px;
-    border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-    }
-.data_container table.player_sort tr.head td{
-    background-color: #c2d278;
-    font-weight: bold;
-
-}
-.data_container table.player_sort tr.line1 td{
-    background-color: #d3de9c;
-
-    }
-table.team_list{
-    background-color: #edf2d7;
-    width: 896px;
-    margin-left: 20px;
-
-}
-
-table.team_list td{
-    width: 112px;
-    text-align: center;
-    height: 20px;
-    line-height: 20px;
-     color: #6E812A;
-     font-weight: bold;
-
-}
-table.team_list td a{
-    color: #6E812A;
-    }
-
-table.team_list td.col1{
-    background-color: #d3de9c;
-}
-
-table.team_stat_info{
-
-    width: 896px;
-    margin-left: 20px;
-
-}
-
-table.team_stat_info td{
-    background-color: #edf2d7;
-    width: 112px;
-    text-align: center;
-    height: 24px;
-    line-height: 24px;
-     color: #6E812A;
-     font-weight: bold;
-     border-right: 1px solid  #5b0000;
-    border-bottom: 1px solid #5b0000;
-}
-table.team_stat_info tr.line1 td{
-    background-color: #d3de9c;
-}
-table.team_stat_info td.onecolomun{
-    width: 896px;
-    background-color: #f6f6f6;
-    text-align: left;
-}
-table.team_stat_info tr.line1 td.onecolomun{
-
-    background-color: #f6f6f6;
-
-}
-table.team_stat_info td.title{
-    width: 134px;
-    font-weight: normal;
-
-}table.team_stat_info td.score{
-    width: 90px;
-    font-family: "verdana";
-
-}
-.team_info{
-	float:left;
-}
-h1{
-	font-size:24px;
-	line-height:40px;
-}
-.team_logo{
-    float:right;
-}
-.undis{
-	display:none;
-}
-.footer{text-align:center;line-height:28px;margin:20px auto 0;width:950px;}

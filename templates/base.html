@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="/static/style.css"/>
+<title>{%block title%}{%endblock%}</title>
+</head>
+<body>
+	<div id="container">
+		<div id="logo-panel">
+		</div>
+		<div id="nav-panel">
+			<a class="cur" href="{%url 'ranking.views.index'%}">Results</a>
+			<a href="{%url 'ranking.views.add'%}">Add</a>
+			<a href="{%url 'ranking.views.update'%}">Update</a>
+		</div>
+		<div id="content-panel">
+		{%block content%}
+		{%endblock%}
+		</div>
+	</div>
+</body>
+</html>
