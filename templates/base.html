@@ -11,11 +11,17 @@
 		</div>
 		<div id="nav-panel">
 			<a class="cur" href="{%url 'ranking.views.index'%}">Results</a>
+			{%if user%}
 			<a href="{%url 'ranking.views.add'%}">Add</a>
-			<a href="{%url 'ranking.views.update'%}">Update</a>
+			{%endif%}
 		</div>
 		<div id="content-panel">
 		{%block content%}
+		{%endblock%}
+		</div>
+		<div id="footer-panel">
+		{%block footer%}
+		&nbsp;
 		{%endblock%}
 		</div>
 	</div>

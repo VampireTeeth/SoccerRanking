@@ -2,8 +2,10 @@
 {%block title%}Ranking | Results{%endblock%}
 
 {%block content%}
+<div class="team_score_slide">
+<div class="team_score_top">&nbsp;</div>
 <div class="team_score_body">
-	<div class="team_score_top">&nbsp;</div>
+
 	<table border="0" cellpadding="0" cellspacing="0" class="score_list">
 	    <tr class="head">
 	        <td class="score" >
@@ -30,7 +32,7 @@
 	   	{%for team in teams%}
 	   	<tr>
 	        <td class="score" >
-	            {{team.rank}}</td>
+	            {{forloop.counter}}</td>
 	        <td class="team" >
 	            {{team.name}}</td>
 	        <td class="score" >
@@ -52,6 +54,38 @@
 	    </tr>
 	   	{%endfor%}
 	</table>
-	<div class="team_score_bottom">&nbsp;</div>
+	
+</div>
+<div class="team_score_bottom">&nbsp;</div>
+</div>
+ <div class="left_slide">
+   <div class="left_border_top">&nbsp;</div>
+   <div class="left_border_body">
+<!--DataBlock2 Start-->
+       <table cellpadding="0" cellspacing="0">
+       	{%for match in matches%}
+           <tr>
+               <td class="team">{{match.host.name}}</td>
+               <td class="team">
+               {%if match.finished%}{{match.host_score}}:{{match.visitor_score}}{%endif%}
+               {%if not match.finished%}VS{%endif%}
+               </td>
+               <td class="team">{{match.visitor.name}}</td>
+               <td class="team">Round {{match.round}}</td>
+               <td class="team" style="border-right:0;">
+               {%if not match.finished%}
+               <a href="{%url 'ranking.views.update' match.id%}">Update</a>
+               {%endif%}
+               {%if match.finished%}
+               Finished
+               {%endif%}
+               </td>
+           </tr>
+        {%endfor%}
+       </table>
+<!--DataBlock2 End-->
+   </div>
+   <div class="left_border_bottom">&nbsp;</div>
+
 </div>
 {%endblock%}

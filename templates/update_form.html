@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div class="update_form_panel">
+	<div>Host:&nbsp;&nbsp;&nbsp;&nbsp;{{match.host.name}}</div>
+	<div>Visitor: {{match.visitor.name}}</div>
+	{%if form.errors%}
+	<div>Please correct following input errors:</div>
+	{%endif%}
+	<form action="." method="post">
+		{%csrf_token%}
+		<table>
+		{{form.as_table}}
+		</table>
+		<input type="submit" value="Update"/>
+	</form>
+</div>
+{%endblock%}
