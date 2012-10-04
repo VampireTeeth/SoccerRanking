@@ -59,8 +59,8 @@ body{
     background-image: url("/static/images/right_slider_bg.gif");
 }
 .team_score_body table.score_list{
-    width: 510px;
-    margin-left: 11px;
+	width: 510px;
+	margin: 0 auto;
 }
 .team_score_body table.score_list td{
     line-height: 24px;
@@ -70,11 +70,12 @@ body{
     border-bottom: 1px solid #5b0000;
     height: 24px;
     background-color: #d3de9c;
+	font-size: 12px;
 }
 .team_score_body table.score_list tr.head td{
-
     background-color: #c2d278;
     color:#6E812A;
+    font-weight: bold;
 }
 .team_score_body table.score_list tr.line1 td{
 
@@ -82,12 +83,10 @@ body{
 }
 .team_score_body table.score_list td.score{
     font-family: "verdana";
-    width: 50px;
-    font-weight: bold;
+    font-weight: normal;
 }
 .team_score_body table.score_list td.team{
-    width: 100px;
-    font-weight: bold;
+    font-weight: normal;
 
 }
 .team_score_bottom{

@@ -10,7 +10,7 @@
 	    <tr class="head">
 	        <td class="score" >
 	            Rank</td>
-	        <td class="team" >
+	        <td class="score" >
 	            Team</td>
 	        <td class="score" >
 	            Matches</td>
@@ -74,7 +74,7 @@
                <td class="team">Round {{match.round}}</td>
                <td class="team" style="border-right:0;">
                {%if not match.finished%}
-               <a href="{%url 'ranking.views.update' match.id%}">Update</a>
+               <a href="{%url ranking.views.update match.id%}">Update</a>
                {%endif%}
                {%if match.finished%}
                Finished

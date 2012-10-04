@@ -1,5 +1,12 @@
 # Django settings for soccer project.
 
+import sys, os
+prj_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+static_dir = os.path.join(prj_dir, 'static').replace('\\', '/')
+template_dir = os.path.join(prj_dir, 'templates').replace('\\', '/')
+if prj_dir not in sys.path:
+  sys.path.append(prj_dir)
+  
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -67,9 +74,9 @@ STATIC_URL = '/static/'
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/static/admin/'
 
-import os
-prj_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-static_dir = os.path.join(prj_dir, 'static').replace('\\', '/')
+
+
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
@@ -106,18 +113,16 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'soccer.urls'
 
-template_dir = os.path.join(prj_dir, 'templates').replace('\\', '/')
 
-print template_dir
+
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     template_dir,
 )
-import sys
-if prj_dir not in sys.path:
-  sys.path.append(prj_dir)
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
