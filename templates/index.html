@@ -73,7 +73,7 @@
                <td class="team">{{match.visitor.name}}</td>
                <td class="team">Round {{match.round}}</td>
                <td class="team" style="border-right:0;">
-               {%if not match.finished%}
+               {%if not match.finished and request.user.is_staff%}
                <a href="{%url ranking.views.update match.id%}">Update</a>
                {%endif%}
                {%if match.finished%}
