@@ -10,9 +10,24 @@
 		<div id="logo-panel">
 		</div>
 		<div id="nav-panel">
-			<a class="cur" href="{%url ranking.views.index %}">Results</a>
-			{%if user%}
-			<a href="{%url ranking.views.add %}">Add</a>
+			<a class="cur link" href="{%url ranking.views.index %}">Results</a>
+			{%if request.user.is_anonymous %}
+				{%if form %}
+				<form action="." method="post">
+					{%csrf_token%}
+					{%for field in form%}
+					{{field.label_tag}}{{field}}&nbsp;
+					{%endfor%}
+					<input type="submit" value="Admin Login"/>
+					{%if auth_failed%}
+				    <span style="color:red;">Authentication failed.</span>
+					{%endif%}
+				</form>
+				{%endif%}
+			{%endif%}
+			{%if not request.user.is_anonymous%}
+				<span>Welcome! {{request.user|capfirst}}</span>
+				<a href="{%url ranking.views.logout %}">Admin logout</a>
 			{%endif%}
 		</div>
 		<div id="content-panel">

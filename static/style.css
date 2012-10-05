@@ -19,7 +19,7 @@ body{
     background-image: url("/static/images/sub_line.jpg");
 }
 
-#nav-panel a{
+#nav-panel a.link{
     color: white;
     margin-right: 24px;
     line-height: 32px;

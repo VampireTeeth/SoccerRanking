@@ -1,19 +1,40 @@
 # Create your views here.
 
 from ranking.models import Team, Match, Season
-from ranking.forms import MatchForm
+from ranking.forms import MatchForm, UserForm
 from django.shortcuts import render_to_response, get_object_or_404
 from django.template.context import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.contrib import auth
+
+def logout(request):
+  auth.logout(request)
+  return HttpResponseRedirect(reverse(index))
 
 def index(request):
   teams = Team.objects.all().order_by('-score')
   matches = Match.objects.all().order_by('-round')
-  
-  d = dict(teams=teams, matches=matches, user=request.user)
-    
-  return render_to_response('index.html', d)
+  d = dict(teams=teams, matches=matches, request=request)
+  form = None
+  if request.POST:
+    form = UserForm(request.POST)
+    if not form.errors:
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user = auth.authenticate(username=username, password=password)
+        
+        if user is not None and user.is_staff:
+          auth.login(request, user)
+          request.user = user
+          return HttpResponseRedirect(reverse(index))
+        d.update(auth_failed=True)
+  else:
+    if request.user.is_anonymous():
+      form = UserForm()
+  if form: d.update(form=form)
+  return render_to_response('index.html', d, 
+                            context_instance=RequestContext(request))
 
 def add(request):
   pass
